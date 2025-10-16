@@ -42,19 +42,6 @@ services:
     ports:
       - "3000:3000"
 
-  n8n:
-    image: n8nio/n8n:latest
-    platform: linux/amd64
-    environment:
-      WEBHOOK_URL: http://host.docker.internal:5678
-      N8N_HOST: host.docker.internal
-      GENERIC_TIMEZONE: America/Sao_Paulo
-      N8N_LOG_LEVEL: debug
-      N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE: true
-    volumes:
-      - n8n_data:/home/node/.n8n
-    ports:
-      - "5678:5678"
 
 volumes:
   pgdata:
