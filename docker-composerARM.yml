@@ -43,6 +43,7 @@ services:
       N8N_HOST: host.docker.internal
       GENERIC_TIMEZONE: America/Sao_Paulo
       N8N_LOG_LEVEL: debug
+      N8N_SECURE_COOKIE: false
       N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE: true
     volumes:
       - n8n_data:/home/node/.n8n
